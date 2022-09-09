@@ -9,7 +9,7 @@ alert('Welcome to my Website!');
 //Use a prompt to ask for the user's favorite color. Use the user's response
 // to alert a message that says that the color entered is your favorite color too.
 let favColor = prompt("What is your favorite color");
-alert('Awesome, ' + favColor + ' is my favorite color too!');
+alert('Awesome, ' + favColor.trim() + ' is my favorite color too!');
 
 // Complete exercise 3 from the previous lesson, but write your code
 // in the external.js file instead of in the console.
