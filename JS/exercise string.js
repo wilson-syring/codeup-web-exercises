@@ -58,7 +58,8 @@ let password = 'notastrongpassword';
 
 let passOverFive = password.length >=5;
 let noUserNameInPass = (password === password.replace(username, ''));
-let userNamelength = username.lentgh < 20;
+let userNamelength = username.length < 20;
 let noWhiteSpace = (password.length === password.trim().length) && (username.length === username.trim().length);
-console.log('Your password is over 5 characters: '+ passOverFive, 'There is no username in password: '+ noUserNameInPass,'The username is less then 20: '+ userNameLength,'There is no white space around the password:' + noWhiteSpace)
-console.log
+console.log('Your password is over 5 characters: '+ passOverFive, 'There is no username in password: '
+    + noUserNameInPass,'The username is less then 20: '+ userNamelength,'There is no white space around the password:'
+    + noWhiteSpace)
