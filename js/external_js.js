@@ -39,14 +39,14 @@ alert('You made entirely too much money this week, check this $'+ total2);
 
 let classFull = confirm("Is the class full");
 let scheduleConflict = confirm("Is your schedule open for this class?");
-let canEnroll = !classFull && !scheduleConflict;git
+let canEnroll = !classFull && !scheduleConflict;
 alert('Can you enroll in class ' + canEnroll);
 console.log('Can you enroll in class ' + canEnroll);
 
 let hatsBought = Number.parseInt(prompt('How many hats would you like purchase today?'));
 let offeredExpired = confirm('Has the offer expired?');
 let premiumMember = confirm('Are you a premium member');
-let canBeApplied = (hatsBought >= 2 || premiumMember) && !offeredExpired;
+let canBeApplied = (hatsBought >= 3 || premiumMember) && !offeredExpired;
 alert('Can we discount your purchase today? '+ canBeApplied);
 console.log('Can we discount your purchase today? '+ canBeApplied);
 
