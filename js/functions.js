@@ -4,18 +4,24 @@
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
  * When called, the function should return a message that says hello to the passed in name.
- *
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
+function sayHello(codeup){
+    return codeup;
+}
+alert("Hello, "+ sayHello('codeup') + "!");
+console.log('Hello '+ sayHello('codeup') + '!');
 
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
  * Store the result of the function call in a variable named 'helloMessage'.
- *
  * console.log 'helloMessage' to check your work
  */
+let  helloMessage = prompt('What do you call yourself?')
+console.log('The user name is, ' + helloMessage)
+alert('Hello, '+sayHello(helloMessage))
 
 /**
  * TODO:
