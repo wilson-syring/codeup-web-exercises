@@ -97,7 +97,7 @@ alert('The tip should be, $'+ Math.round(calculateTip(billAmt,tip)));
  * > var originalPrice = 100;
  * > var discountPercent = .2; // 20%
  * > applyDiscount(originalPrice, discountPercent) // 80
- *
+ *git add
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 function applyDiscount(x,y){
@@ -106,6 +106,7 @@ function applyDiscount(x,y){
 var originalPrice = parseFloat(prompt('What does it cost?'));
 var discountPercent = parseFloat(prompt('What percent, with a decimal, is the discount?'));
 console.log("The cost is $"+ originalPrice +'The discount is %'+discountPercent);
+//used the calculatetip function to complete this instead of writing a new function//
 var theDiscount = Math.round(calculateTip(originalPrice,discountPercent));
 console.log("The total discount is $"+ theDiscount);
 alert("Your total today is $"+applyDiscount(originalPrice,theDiscount));
