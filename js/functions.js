@@ -29,6 +29,9 @@ alert('Hello, '+sayHello(helloMessage))
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+var myName = "Master"
+console.log('Thy name is, '+myName)
+alert('Hello, '+sayHello(myName))
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -51,7 +54,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-
+function isTwo(x){
+    return x === 2;
+}
+console.log('the number is '+ isTwo(random));
+alert('the number is 2: '+ isTwo(random))
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -63,6 +70,9 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+function calculateTip(x,y){
+    return x * y;
+}
 
 /**
  * TODO:
@@ -70,6 +80,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+var billAmt = parseFloat(prompt('How much is your bill?'));
+var tip = parseFloat(prompt("With a decimal, what percent would you like to tip?"));
+console.log('Your bill is: $'+billAmt+' The tip % you chose: '+tip);
+alert('Your bill is: $'+billAmt+' The tip % you chose: '+tip);
+alert('The tip should be, $'+ Math.round(calculateTip(billAmt,tip)));
 
 /**
  * TODO:
@@ -85,3 +100,12 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+function applyDiscount(x,y){
+    return x - y;
+}
+var originalPrice = parseFloat(prompt('What does it cost?'));
+var discountPercent = parseFloat(prompt('What percent, with a decimal, is the discount?'));
+console.log("The cost is $"+ originalPrice +'The discount is %'+discountPercent);
+var theDiscount = Math.round(calculateTip(originalPrice,discountPercent));
+console.log("The total discount is $"+ theDiscount);
+alert("Your total today is $"+applyDiscount(originalPrice,theDiscount));
