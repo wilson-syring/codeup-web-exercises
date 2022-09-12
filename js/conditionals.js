@@ -21,7 +21,27 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-
+function analyzeColor(color){
+    if(color === 'red'){
+        console.log('Roses are red');
+        alert('Roses are red');
+    } else if(color === 'orange'){
+        console.log('Tiger Lilies are orange.');
+        alert('Tiger Lilies are orange.');
+    } else if(color === 'yellow'){
+        console.log('Sunflowers are yellow');
+        alert('Sunflowers are yellow');
+    } else if(color === 'green'){
+        console.log('Grass is green');
+        alert('Grass is green');
+    } else if(color === 'blue'){
+        console.log('Bluebonnets are blue');
+        alert('Bluebonnets are blue');
+    } else {
+        console.log('I am not real sure what color this is');
+        alert('I am not real sure what color this is');
+    }
+}
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
