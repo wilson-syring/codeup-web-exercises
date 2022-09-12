@@ -97,7 +97,7 @@ alert('The tip should be, $'+ Math.round(calculateTip(billAmt,tip)));
  * > var originalPrice = 100;
  * > var discountPercent = .2; // 20%
  * > applyDiscount(originalPrice, discountPercent) // 80
- *git add
+ *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 function applyDiscount(x,y){
