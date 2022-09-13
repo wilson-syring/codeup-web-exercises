@@ -26,17 +26,17 @@ function analyzeColor(color){
         console.log('Arcturus is a red giant');
         alert('Arcturus is a red giant');
     } else if(color === 'orange'){
-        console.log('Texas LongHorns wear orange.');
-        alert('Texas Longhorns wear orange.');
+        console.log('Enif is a  orange supergiant');
+        alert('Enif is a  orange supergiant');
     } else if(color === 'yellow'){
-        console.log('Decapoda is a yellow super giant');
-        alert('Sunflowers are yellow');
+        console.log('Decapoda is a yellow supergiant');
+        alert('Decapoda is a yellow supergiant');
     } else if(color === 'green'){
-        console.log('Grass is green');
-        alert('Grass is green');
+        console.log('Andromedae Alpha is a green dwarf');
+        alert('Andromedae Alpha is a green dwarf');
     } else if(color === 'blue'){
-        console.log('Bluebonnets are blue');
-        alert('Bluebonnets are blue');
+        console.log('Rigel is a blue supergiant');
+        alert('Rigel is a blue supergiant');
     } else {
         console.log('I am not real sure what color this is');
         alert('I am not real sure what color this is');
