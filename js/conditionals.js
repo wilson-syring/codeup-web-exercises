@@ -21,27 +21,27 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-function analyzeColor(color){
-    if(color === 'red'){
-        console.log('Arcturus is a red giant');
-        alert('Arcturus is a red giant');
-    } else if(color === 'orange'){
-        console.log('Enif is a  orange supergiant');
-        alert('Enif is a  orange supergiant');
-    } else if(color === 'yellow'){
-        console.log('Decapoda is a yellow supergiant');
-        alert('Decapoda is a yellow supergiant');
-    } else if(color === 'green'){
-        console.log('Andromedae Alpha is a green dwarf');
-        alert('Andromedae Alpha is a green dwarf');
-    } else if(color === 'blue'){
-        console.log('Rigel is a blue supergiant');
-        alert('Rigel is a blue supergiant');
-    } else {
-        console.log('I am not real sure what color this is');
-        alert('I am not real sure what color this is');
-    }
-}
+// function analyzeColor(color){
+//     if(color === 'red'){
+//         console.log('Arcturus is a red giant');
+//         alert('Arcturus is a red giant');
+//     } else if(color === 'orange'){
+//         console.log('Enif is a orange supergiant');
+//         alert('Enif is a  orange supergiant');
+//     } else if(color === 'yellow'){
+//         console.log('Decapoda is a yellow supergiant');
+//         alert('Decapoda is a yellow supergiant');
+//     } else if(color === 'green'){
+//         console.log('Andromedae Alpha is a green dwarf');
+//         alert('Andromedae Alpha is a green dwarf');
+//     } else if(color === 'blue'){
+//         console.log('Rigel is a blue supergiant');
+//         alert('Rigel is a blue supergiant');
+//     } else {
+//         console.log('I am not real sure what stars are that color');
+//         alert('I am not real sure what stars are that color');
+//     }
+// }
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -54,19 +54,50 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-
+//analyzeColor(randomColor)
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
+
+function analyzeColor() {
+    var colorChoice = prompt("What color of star would you like to know about?");
+    switch (colorChoice.toLowerCase()) {
+        case "red":
+            alert("Arcturus is a red giant");
+            console.log('Arcturus is a red giant');
+            break;
+        case "orange":
+            alert("Enif is a orange supergiant");
+            console.log("Enif is a orange supergiant");
+            break;
+        case "yellow":
+            alert("Decapoda is a yellow supergiant");
+            console.log("Decapoda is a yellow supergiant");
+            break;
+        case "green":
+            alert("Andromedae Alpha is a green dwarf");
+            console.log("Andromedae Alpha is a green dwarf");
+            break;
+        case "blue":
+            alert("Rigel is a blue supergiant");
+            console.log("Rigel is a blue supergiant");
+            break;
+        default:
+            alert(colorChoice + " I am not real sure what stars are that color");
+            console.log(" I am not real sure what stars are that color");
+            break;
+    }
+}
+analyzeColor()
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
+// this is also in the previous segment of code//
 /* ########################################################################## */
 
 /**
@@ -88,6 +119,43 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+//I combined some of the to do's on this list for continutiy//
+
+function calculateTotal(){
+    var luckyNumber = Math.floor(Math.random() * 6);
+    var totalPrice = parseFloat(prompt('What is your total?'));
+    var discountAmount = 1;
+    if(luckyNumber === 1){
+        discountAmount = .10;
+        totalPrice = totalPrice - (totalPrice * discountAmount).toFixed(2);
+        alert('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
+        console.log('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
+    } else if (luckyNumber === 2){
+        discountAmount = .20;
+        totalPrice = totalPrice - (totalPrice * discountAmount).toFixed(2);
+        alert('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
+        console.log('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
+    } else if (luckyNumber === 3) {
+        discountAmount = .30;
+        totalPrice = totalPrice - (totalPrice * discountAmount).toFixed(2);
+        alert('Your lucky number was: ' + luckyNumber + ',and your total is $' + totalPrice);
+        console.log('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
+    } else if (luckyNumber === 4) {
+        discountAmount = .40;
+        totalPrice = totalPrice - (totalPrice * discountAmount).toFixed(2);
+        alert('Your lucky number was: ' + luckyNumber + ',and your total is $' + totalPrice);
+        console.log('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
+    } else if (luckyNumber === 5) {
+        discountAmount = .50;
+        totalPrice = totalPrice - (totalPrice * discountAmount).toFixed(2);
+        alert('Your lucky number was: ' + luckyNumber + ',and your total is $' + totalPrice);
+        console.log('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
+    } else {
+        alert('Your lucky number was: ' + luckyNumber + ',and your total is $' + totalPrice);
+        console.log('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
+    }
+}
+calculateTotal()
 
 /**
  * TODO:
@@ -97,8 +165,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+// this was completed in the previous segment of code //
+
 
 /**
  * TODO:
@@ -118,3 +186,28 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+function isNegative(num) {
+    if (typeof num === 'number' && Math.sign(num) === -1) {
+        return true;
+    }
+    return false;
+}
+
+function numberGame (){
+    let result = confirm("Would you like to enter a number? Click OK");
+    if (result === true){
+        if (isNaN())
+        let numbers = parseInt(prompt("what number would you like to use"));
+        let isEven = numbers % 2 == 0 ? "Your number is even" : "Your number is odd";
+        let sumOne = numbers + 100;
+        console.log('The number entered is: '+ numbers);
+        alert('The number you picked is: '+ numbers);
+        alert('The sum of 100 + your number is: '+ sumOne);
+        alert(isEven);
+        alert('The number is a negative number: '+isNegative(numbers));
+    }else {
+        alert('Awe, you did not quite make it, thanks for playing numberGame!');
+        console.log('Awe, you did not quite make it, thanks for playing numberGame!');
+    }
+}
+numberGame()
