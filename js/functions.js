@@ -8,10 +8,10 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello(codeup){
-    return codeup;
+    return "Hello " + codeup;
 }
-alert("Hello, "+ sayHello('codeup') + "!");
-console.log('Hello '+ sayHello('codeup') + '!');
+alert(sayHello('codeup') + "!");
+console.log(sayHello('codeup') + '!');
 
 /**
  * TODO:
@@ -31,7 +31,7 @@ alert('Hello, '+sayHello(helloMessage))
  */
 var myName = "Master"
 console.log('Thy name is, '+myName)
-alert('Hello, '+sayHello(myName))
+alert(sayHello(myName))
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random

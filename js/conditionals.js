@@ -23,13 +23,13 @@
  */
 function analyzeColor(color){
     if(color === 'red'){
-        console.log('Roses are red');
-        alert('Roses are red');
+        console.log('Arcturus is a red giant');
+        alert('Arcturus is a red giant');
     } else if(color === 'orange'){
-        console.log('Tiger Lilies are orange.');
-        alert('Tiger Lilies are orange.');
+        console.log('Texas LongHorns wear orange.');
+        alert('Texas Longhorns wear orange.');
     } else if(color === 'yellow'){
-        console.log('Sunflowers are yellow');
+        console.log('Decapoda is a yellow super giant');
         alert('Sunflowers are yellow');
     } else if(color === 'green'){
         console.log('Grass is green');
