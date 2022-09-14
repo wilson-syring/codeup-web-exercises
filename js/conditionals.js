@@ -62,7 +62,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 
 function analyzeColor() {
-    var colorChoice = prompt("What color of star would you like to know about?");
+    let colorChoice = prompt("What color of star would you like to know about?");
+    console.log(colorChoice)
     switch (colorChoice.toLowerCase()) {
         case "red":
             alert("Arcturus is a red giant");
@@ -127,32 +128,32 @@ function calculateTotal(){
     var discountAmount = 1;
     if(luckyNumber === 1){
         discountAmount = .10;
-        totalPrice = totalPrice - (totalPrice * discountAmount).toFixed(2);
-        alert('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
-        console.log('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
+        totalPrice = totalPrice - (totalPrice * discountAmount);
+        alert('Your lucky number was: '+ luckyNumber + ' ,and your total is $'+ totalPrice.toFixed(2));
+        console.log('Your lucky number was: '+ luckyNumber + ' ,and your total is $'+ totalPrice.toFixed(2));
     } else if (luckyNumber === 2){
         discountAmount = .20;
-        totalPrice = totalPrice - (totalPrice * discountAmount).toFixed(2);
-        alert('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
-        console.log('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
+        totalPrice = totalPrice - (totalPrice * discountAmount);
+        alert('Your lucky number was: '+ luckyNumber + ' ,and your total is $'+ totalPrice.toFixed(2));
+        console.log('Your lucky number was: '+ luckyNumber + ' ,and your total is $'+ totalPrice.toFixed(2));
     } else if (luckyNumber === 3) {
         discountAmount = .30;
-        totalPrice = totalPrice - (totalPrice * discountAmount).toFixed(2);
-        alert('Your lucky number was: ' + luckyNumber + ',and your total is $' + totalPrice);
-        console.log('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
+        totalPrice = totalPrice - (totalPrice * discountAmount);
+        alert('Your lucky number was: ' + luckyNumber + ' ,and your total is $' + totalPrice.toFixed(2));
+        console.log('Your lucky number was: '+ luckyNumber + ' ,and your total is $'+ totalPrice.toFixed(2));
     } else if (luckyNumber === 4) {
         discountAmount = .40;
-        totalPrice = totalPrice - (totalPrice * discountAmount).toFixed(2);
-        alert('Your lucky number was: ' + luckyNumber + ',and your total is $' + totalPrice);
-        console.log('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
+        totalPrice = totalPrice - (totalPrice * discountAmount);
+        alert('Your lucky number was: ' + luckyNumber + ' ,and your total is $' + totalPrice.toFixed(2));
+        console.log('Your lucky number was: '+ luckyNumber + ' ,and your total is $'+ totalPrice.toFixed(2));
     } else if (luckyNumber === 5) {
         discountAmount = .50;
-        totalPrice = totalPrice - (totalPrice * discountAmount).toFixed(2);
-        alert('Your lucky number was: ' + luckyNumber + ',and your total is $' + totalPrice);
-        console.log('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
+        totalPrice = totalPrice - (totalPrice * discountAmount);
+        alert('Your lucky number was: ' + luckyNumber + ' ,and your total is $' + totalPrice.toFixed(2));
+        console.log('Your lucky number was: '+ luckyNumber + ' ,and your total is $'+ totalPrice.toFixed(2));
     } else {
-        alert('Your lucky number was: ' + luckyNumber + ',and your total is $' + totalPrice);
-        console.log('Your lucky number was: '+ luckyNumber + ',and your total is $'+ totalPrice);
+        alert('Your lucky number was: ' + luckyNumber + ' ,and your total is $' + totalPrice.toFixed(2));
+        console.log('Your lucky number was: '+ luckyNumber + ' ,and your total is $'+ totalPrice.toFixed(2));
     }
 }
 calculateTotal()
@@ -186,28 +187,27 @@ calculateTotal()
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-function isNegative(num) {
-    if (typeof num === 'number' && Math.sign(num) === -1) {
-        return true;
-    }
-    return false;
-}
 
 function numberGame (){
     let result = confirm("Would you like to enter a number? Click OK");
-    if (result === true){
-        if (isNaN())
+    if (result === false){
+        alert("You broke me please refresh your browser and try again")
+        console.log("I broke try again")
+    } else {
         let numbers = parseInt(prompt("what number would you like to use"));
-        let isEven = numbers % 2 == 0 ? "Your number is even" : "Your number is odd";
+        let numCheck = (isNaN(numbers)) ? "That's not a number" : "That's a number"
+        let isEven = numbers % 2 == 0 ? "The number: "+ numbers + " was even" : "The number: "+ numbers + " was odd";
         let sumOne = numbers + 100;
+        let negativeCheck = numbers >= 0 ? "The number: "+ numbers + " was positive" : "The number: "+ numbers + " was negative";
+        alert(numCheck)
         console.log('The number entered is: '+ numbers);
         alert('The number you picked is: '+ numbers);
         alert('The sum of 100 + your number is: '+ sumOne);
+        console.log(sumOne);
         alert(isEven);
-        alert('The number is a negative number: '+isNegative(numbers));
-    }else {
-        alert('Awe, you did not quite make it, thanks for playing numberGame!');
-        console.log('Awe, you did not quite make it, thanks for playing numberGame!');
+        console.log(isEven);
+        alert(negativeCheck);
+        console.log(negativeCheck);
     }
 }
 numberGame()
