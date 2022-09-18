@@ -16,11 +16,11 @@
 // 16384
 // 32768
 // 65536
-
-// for (let i = 2; i < 131072; i*=2) {
-//     console.log(i)
-// }
-
+let num = 1
+while(num <= 32768){
+    num *= 2;
+    console.log(num);
+}
 //An ice cream seller can't go home until she sells all of her cones.
 //First write enough code that generates a random number between 50 and 100
 //representing the amount of cones to sell before you start your loop.
@@ -29,9 +29,18 @@
 //by her clients. Use a do-while loop to log to the
 //console the amount of cones sold to each person.
 
-// let allCones = Math.floor(Math.random() * 50) + 50;
-// let numOfCones = Math.floor(Math.random() * 5) + 1;
-// for (let i = allCones;i < allCones; i-=numOfCones){
-//     console.log("here is a number "+allCones);
-//
-// }
+let allCones = Math.floor(Math.random() * 50) + 50;
+console.log('There are '+allCones+ ' cones to sell today!');
+do{
+    let numOfCones = Math.floor(Math.random() * 5) + 1;
+    if(allCones < numOfCones){
+        console.log('Im sorry we dont have '+ numOfCones +', because i only have '+allCones);
+    }else if(allCones > numOfCones){
+        allCones -= numOfCones;
+        console.log(numOfCones + ' cones sold to the customer.');
+    }else{
+        allCones -= numOfCones;
+        console.log("Good job team we sold out!")
+    }
+}while(allCones > 0)
+
