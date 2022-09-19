@@ -3,8 +3,8 @@
 // and console.logs the multiplication
 // table for that number (just multiply by the numbers 1 through 10)
 
-let showMultiplicationTable = function(){
-    const number = parseInt(prompt('Enter an integer to multiply: '));
+let showMultiplicationTable = function(number){
+
     for(let i = 0; i <= 10; i++){
         const result = i * number;
        console.log(number + "*" + i + "=" + result);
