@@ -29,7 +29,7 @@ while(num <= 32768){
 //by her clients. Use a do-while loop to log to the
 //console the amount of cones sold to each person.
 
-//Also had issues with this. Aldanis collaberated and helped me understand this better!
+//Also had issues with this. Aldanis collaborated and helped me understand this better!
 
 let allCones = Math.floor(Math.random() * 50) + 50;
 console.log('There are '+allCones+ ' cones to sell today!');
