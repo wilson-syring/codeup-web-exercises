@@ -36,10 +36,11 @@ console.log('There are '+allCones+ ' cones to sell today!');
 do{
     let numOfCones = Math.floor(Math.random() * 5) + 1;
     if(allCones < numOfCones){
-        console.log('Im sorry we dont have '+ numOfCones +', because i only have '+allCones);
+        console.log('Im sorry we dont have '+ numOfCones +', because I only have '+allCones);
     }else if(allCones > numOfCones){
         allCones -= numOfCones;
         console.log(numOfCones + ' cones sold to the customer.');
+        console.log("I have " +allCones+" left to sell today");
     }else{
         allCones -= numOfCones;
         console.log("Good job team we sold out!")
