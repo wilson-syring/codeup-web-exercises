@@ -20,10 +20,10 @@
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-    console.log("This is the first name: "+names[0]);
-    console.log("This is the second name: "+names[1]);
-    console.log("This is the third name: "+names[2]);
-    console.log("This is the fourth name: "+names[3]);
+    console.log("This is the first name in the array: "+names[0]);
+    console.log("This is the second name in the array: "+names[1]);
+    console.log("This is the third name in the array: "+names[2]);
+    console.log("This is the fourth name in the array: "+names[3]);
 
     /**
      * TODO:
@@ -31,7 +31,7 @@
      * array.
      */
     for (let i = 0; i < names.length; i++) {
-        console.log(`This is a name of one of my instructors ${names[i]}!`);
+        console.log(`This is a name of one of my instructors: ${names[i]}!`);
     }
 
 
@@ -57,5 +57,16 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-
+    function firstIndex(array){
+        console.log("This is the first index in the array: "+array[0]);
+    }
+    firstIndex(names)
+    function secondIndex(array){
+        console.log("This is the second index in the array: "+array[1]);
+    }
+    secondIndex(names)
+    function LastIndex(array){
+        console.log("This is the last index in the array: "+array[array.length-1]);
+    }
+    LastIndex(names)
 })();
