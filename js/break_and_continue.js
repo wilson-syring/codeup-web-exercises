@@ -15,7 +15,7 @@ for (let i = 1; i < 50; i+=2) {
         oddNum = parseInt(prompt("Pick a odd number between 1 and 50"));
         console.log("the number chosen was: "+oddNum);
         continue;
-    }if(i === oddNum){
+    }while(i === oddNum){
         console.log("Yikes! Skipping the chosen number: "+ oddNum);
         break;
     }if(i !== oddNum){
