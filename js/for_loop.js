@@ -44,6 +44,10 @@ for(let i = 1; i <= 9; i++){
     string += "\n";
 }
 console.log(string);
+// repeat method version
+for (let i = 1; i < 10; i++){
+    console.log(i.toString().repeat(i));
+}
 
 //Create a for loop that uses console.log to create the output shown below.
 // 100
