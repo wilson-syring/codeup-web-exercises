@@ -34,7 +34,6 @@
         console.log(`This is a name of one of my instructors: ${names[i]}!`);
     }
 
-
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
@@ -58,15 +57,15 @@
      */
 
     function firstIndex(array){
-        console.log("This is the first index in the array: "+array[0]);
+        return array[0];
     }
     firstIndex(names)
     function secondIndex(array){
-        console.log("This is the second index in the array: "+array[1]);
+        return array[1];
     }
     secondIndex(names)
     function LastIndex(array){
-        console.log("This is the last index in the array: "+array[array.length-1]);
+        return array[array.length-1];
     }
     LastIndex(names)
 })();
