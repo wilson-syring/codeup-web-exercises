@@ -24,6 +24,9 @@
      * string, and <li> tags around each planet.
      */
     console.log(planetsArray.join("<br>"));
-    // let planetsList = <ul>"<li>Mercury</li><li>Venus</li><li>Earth</li><li>Mars</li><li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li>"</ul>;
-    // console.log(planetsArray.join("<li></li>"));
+    let unOrderList = planetsString.split("|");
+    let breakList = "<ul>" + "<li>" + unOrderList.join("</li><li>") + "</li>" + "</ul>";
+    console.log(unOrderList);
+    console.log(breakList);
+
 })();
