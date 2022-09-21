@@ -11,7 +11,7 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    var person = new Object();
+    let person = new Object();
     person.firstName = 'Wilson';
     person.lastName = 'Syring';
     console.log(person.firstName);
@@ -73,6 +73,21 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    let books = [
+        { title: "The Reality of ESP", author: {firstName: "Russel", lastName: "Targ"}
+        },
+        { title: "A Study in Scarlet", author: {firstName: "Aurthur", lastName: "Doyle"}
+        },
+        { title: "Charlie and the Chocolate Factory", author: {firstName: "Ronald", lastName: "Dahl"}
+        },
+        { title: "Silva Mind Control Method", author: {firstName: "Jose", lastName: "Silva"}
+        },
+        { title: "Opening to the Infinite", author: {firstName: "Stephan", lastName: "Schwartz"}
+        }
+    ];
+    console.log(books[0].title);
+    console.log(books[0].author.firstName);
+    console.log(books[0].author.lastName);
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -97,7 +112,10 @@
      *      ---
      *      ...
      */
-
+    books.forEach(function(book, index) {
+        let names = `${book.author.firstName} ${book.author.lastName}`;
+        console.log(`Book:${index +1}\n Book Title: ${book.title}\n Book Author: ${names} `);
+    })
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -108,5 +126,11 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-
+    function createBook(title, firstName, lastName, arrayB) {
+        let newBooks = {title: title, author: {firstName: firstName, lastName: lastName}};
+        arrayB.push(newBooks);
+        return arrayB;
+    }
+    createBook("A Brief History of time","Steven","Hawking",books)
+    console.log(books);
 })();
