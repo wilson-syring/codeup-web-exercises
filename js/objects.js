@@ -49,16 +49,16 @@
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-    console.log(shoppers)
-        shoppers.forEach(function(shopper) {
+    function offer (shoppers){
+        shoppers.forEach(function(shopper){
             if (shopper.amount >= 200) {
-                console.log(`${shopper.name} has spent $${ shopper.amount.toFixed(2)}. ${shopper.name} qualifies for the 12% discount. ${shopper.name}'s total is $${(shopper.amount - (shopper.amount * .12)).toFixed(2)}.`);
+                console.log(`${shopper.name} has spent $${shopper.amount.toFixed(2)}. ${shopper.name} qualifies for the 12% discount. ${shopper.name}'s total is $${(shopper.amount - (shopper.amount * .12)).toFixed(2)}.`);
             } else
                 console.log(`${shopper.name}, did not qualify for a discount. ${shopper.name}'s total is: $${shopper.amount.toFixed(2)}.`);
 
         })
-
-
+    }
+offer(shoppers)
 
     /** TODO:
      * Create an array of objects that represent books and store it in a

@@ -1,4 +1,5 @@
 'use strict'
+//Warmups for Thorsday Sept 22 2022
 // Create a function to sort the array from lowest to highest. Make sure the function accepts an array and returns an array.
 let numArr = [5,8,2,6,9,3,2];
 function sortArray(array) {
