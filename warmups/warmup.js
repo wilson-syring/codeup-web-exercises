@@ -27,3 +27,32 @@ function readBooks (array){
     }
 }
 readBooks(library);
+
+function isOddNum(num){
+    if(isNaN(num) || num % 2 === 0){
+        return false;
+    }
+        return true;
+}
+isOddNum();
+
+function isEvenNum(num){
+    if(isNaN(num) || num % 2 !== 0){
+        return false;
+    }
+    return true;
+}
+isEvenNum();
+
+function identify(input){
+    return typeof input;
+}
+identify();
+
+const arr = [1,2,3,4,5,6,7,8,9,10];
+function getEvenNums() {
+    let theEvens = arr.filter (number => number % 2 == 0);
+    console.log(`The even numbers are: ${theEvens}`)
+}
+getEvenNums(arr);
+//Write a function that takes an array of objects and a string as arguments. Add a property with key ‘continent’ and value equal to the string to each of the objects. Return the new array of objects. Don’t mutate the original array.
