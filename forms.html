@@ -10,38 +10,41 @@
     <div>
         <label for="username">Username</label>
         <input id="username" name="username" type="text" placeholder="Enter username here">
-    </div>
-    <div>
+        <br>
         <label for="password">Password</label>
         <input id="password" name="password" type="password" placeholder="Enter password here.">
     </div>
-
+    <h3>Biography</h3>
     <div>
-        <h3>Biography</h3>
-        <label for="bio"></label>
+        <label for="bio">bio</label>
         <textarea id="bio" name="bio" rows="5" cols="40"></textarea>
     </div>
 
-    <div>
-    <h3>How did you hear about us</h3>
 
-    <input type="radio" name="quiz_question" value="Billboard">Billboard <br>
-    <input type="radio" name="quiz_question" value="Radio Add">Radio Add <br>
-    <input type="radio" name="quiz_question" value="Internet Add">Internet Add <br>
-    <input type="radio" name="quiz_question" value="Other">Other <br>
+    <h3>How did you hear about us</h3>
+    <div>
+        <label for="Billboard">
+            <input id="Billboard" type="radio" name="quiz_question" value="Billboard">Billboard</label><br>
+        <label for="Radio Add">
+            <input id="Radio Add" type="radio" name="quiz_question" value="Radio Add">Radio Add</label><br>
+        <label for="Internet Add">
+            <input id="Internet Add" type="radio" name="quiz_question" value="Internet Add">Internet Add</label><br>
+        <label for="Other">
+            <input id="Other" type="radio" name="quiz_question" value="Other">Other </label>
     </div>
     <div>
         <h3>Which browser do you use</h3>
-        <select name="browser_preference">
+        <label for="browserselect">
+            <select id=browserselect name="browser_preference">
             <option value="chrome">Chrome</option>
             <option value="safari">Safari</option>
             <option value="firefox">Firefox</option>
             <option value="edge">Edge</option>
-        </select>
+        </select></label>
     </div>
-    <div>
+
     <button type="submit">Submit</button>
-</div>
+
 </form>
 </body>
 </html>
