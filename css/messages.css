@@ -1,6 +1,6 @@
 * {
     --info-bg: #BED2F8FF;
-    --text-info: #2C248DFF;
+    --text-info: #5549c5;
 }
 
 body, html {
@@ -30,7 +30,7 @@ body, html {
 
 .message-warning {
     background-color: #FAF99DFF;
-    color: #5C4E01FF;
+    color: #796701;
 }
 
 .message-error {
