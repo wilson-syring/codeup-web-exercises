@@ -1,4 +1,28 @@
+body{
+    font-family: "PT Serif";
+    color: white !important;
+}
+.Background {
+    background-image: url(https://images8.alphacoders.com/558/558706.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+
 .fancy-header {
     color: purple;
     text-decoration: underline;
+}
+
+.fancy-header2{
+    color: firebrick;
+    text-decoration: underline;
+}
+
+hr {
+    border-color: black;
 }
