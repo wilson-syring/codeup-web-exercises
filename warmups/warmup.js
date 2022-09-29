@@ -56,3 +56,9 @@ function getEvenNums() {
 }
 getEvenNums(arr);
 //Write a function that takes an array of objects and a string as arguments. Add a property with key ‘continent’ and value equal to the string to each of the objects. Return the new array of objects. Don’t mutate the original array.
+let contArr = [{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }]
+let contArr2 = contArr.map(object => {
+    return {...object, continent: 'Asia'};
+    });
+console.log(contArr2);
+console.log(contArr)
