@@ -61,4 +61,4 @@ let contArr2 = contArr.map(object => {
     return {...object, continent: 'Asia'};
     });
 console.log(contArr2);
-console.log(contArr)
+console.log(contArr);
