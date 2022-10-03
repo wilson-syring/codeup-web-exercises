@@ -62,3 +62,14 @@ let contArr2 = contArr.map(object => {
     });
 console.log(contArr2);
 console.log(contArr);
+
+for (let i = 20;i >=0; i--){
+    console.log(i);
+}
+
+let fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
+fruits.push("strawberry");
+fruits.splice(3,0,"strawberry");
+fruits.unshift("strawberry"),
+console.log(fruits);
+
