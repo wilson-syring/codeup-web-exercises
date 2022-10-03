@@ -21,6 +21,7 @@ header {
     background-size: cover;
     min-height: 300px;
     padding-top: 275px;
+
 }
 a {
     color: var(--link-color);
@@ -29,6 +30,7 @@ a {
     background: var(--light-bg);
     position: fixed;
     width: 100%;
+    z-index: 1000;
 }
 .nav {
     list-style-type: none;
@@ -50,10 +52,12 @@ a {
 .profile {
     background: var(--light-bg);
     height: 80px;
+    position: relative;
 }
 .profile-image {
     position: absolute;
-    top: 243px;
+    bottom: -22px;
+
 }
 .profile-form {
     float: right;
