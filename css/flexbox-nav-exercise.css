@@ -17,12 +17,10 @@ ul {
     margin: 0;
     align-items: center;
     height: inherit;
-
 }
 nav a {
     text-decoration: none;
     color: black;
-
 }
 nav a:hover {
     color: #0000FF;
@@ -46,7 +44,4 @@ li:nth-child(6) {
     margin: auto;
     display: flex;
     align-items: center;
-}
-li:not(.logo-item) {
-    z-index: 1;
 }
