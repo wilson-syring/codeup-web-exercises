@@ -54,8 +54,11 @@ h1{
 .header-img{
     display: flex;
     justify-content: center;
-    max-height: 224px;
-    min-width: 339px;
+    width: 100%;
+}
+
+img {
+    width: 100%;
 }
 
 h2{
