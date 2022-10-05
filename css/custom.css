@@ -1,0 +1,9 @@
+.jumbotron{
+    display: flex;
+    justify-content: center;
+    height: 346px;
+    background-size: cover;
+}
+.jumbotron img{
+    width: 80%;
+}
