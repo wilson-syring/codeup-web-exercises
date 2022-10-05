@@ -4,6 +4,7 @@ body{
     padding: 1em;
     max-width: 960px;
 }
+
 .alert-info {
     background-color: #cff;
     color: black;
@@ -13,14 +14,24 @@ body{
     margin: auto;
     padding: 1em;
 }
+
 .alert-info a{
     color: black;
     text-decoration: none;
 }
 
+a:hover {
+    color: purple;
+}
+
+a:visited{
+    color: red;
+}
+
 a {
     color: blue;
 }
+
 h1{
     display: flex;
     justify-content: center;
@@ -43,10 +54,13 @@ h1{
 .header-img{
     display: flex;
     justify-content: center;
+    max-height: 224px;
+    min-width: 339px;
 }
 
 h2{
     font-size: 2em;
+
 }
 .main{
     margin-bottom: 3em;
@@ -59,7 +73,8 @@ section{
 }
 
 .sub-section{
-    margin-bottom: 1em;
+    margin-bottom: 3em;
+    font-style: italic;
 }
 
 footer{
@@ -69,6 +84,45 @@ footer{
     justify-content: space-between;
 }
 
+#social-media-links{
+    margin: 0 1em;
+}
 
+/*media queries for desktop*/
 
-/*media queries*/
+@media screen and (min-width:992px) {
+    .hidden-on-desktop{
+        display: none;
+    }
+
+    h1{
+       float: left;
+    }
+    .nav-links li{
+        background: none;
+        border: none;
+        margin: 0 0.5em;
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+    .header-img{
+        display: flex;
+        justify-content: center;
+        max-height: 400px;
+        min-width: 900px;
+    }
+    .main{
+        display: inline-flex;
+        width: calc(55% - 1em);
+        margin-right: 10em;
+    }
+    .sub-section {
+        display: inline-flex;
+        width: calc(30% - 1em);
+
+    }
+
+}
