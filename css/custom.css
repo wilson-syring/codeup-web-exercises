@@ -1,9 +1,19 @@
 .jumbotron{
-    display: flex;
-    justify-content: center;
     height: 346px;
     background-size: cover;
+    background-image: url(Pics/pizza.png);
+    margin: auto;
+    position: relative;
+
 }
-.jumbotron img{
-    width: 80%;
+.caption {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    color: #000000;
+}
+
+.signup{
+    margin-left: auto;
 }
