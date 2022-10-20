@@ -26,9 +26,10 @@ $('h1').click(function() {
     $(this).css('background-color', '#2c248d');
 });
 
-$('p').dblclick(function(e) {
+$('p').dblclick(function() {
     $(this).css('font-size', '18px');
 });
+
 $('li').hover(
     function () {
         $(this).css('background-color', '#b22222');
