@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+            "width=device-width, initial-scale=1.0">
+    <title>Konami Code</title>
+    <style>
+        body {
+            background-image: url(Pics/contra-menu.jpeg);
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            color: #FF0000;
+            display: none;
+            text-align: center;
+            animation: animate 1.5s linear infinite;
+            font-size: 7em;
+        }
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes animate {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.7;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body class="Background">
+<audio id="pop">
+    <source src="Pics/01 Contra (Title).mp3" type="audio/mpeg">
+</audio>
+<div>
+    <h1 class="success">YOU GAINED 30 LIVES</h1>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+
+    function konami() {
+        var code = "38384040373937396665"
+        var input = "";
+        $(document).keyup(function (event) {
+            console.log(event.keyCode);
+            input += ("" + event.keyCode);
+            if (input === code) {
+                $('audio#pop')[0].play()
+                $('h1').css('display', "block")
+
+            }
+        });
+    }
+
+    konami();
+</script>
+</body>
+</html>
