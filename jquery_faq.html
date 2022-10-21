@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .invisible{
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .invisible {
             display: none;
         }
+
         .highlighted {
             background-color: #FF0;
         }
-        dt,dd{
+
+        dt, dd {
             text-align: center;
+
+        }
+        li{
+            list-style: none;
         }
 
 
@@ -19,27 +29,68 @@
 </head>
 <dl>
     <dt>CLICK ME PLEASE!</dt>
-    <dd class="invisible">here are 10 things</dd>
-    <dd class="invisible">here are 10 things</dd>
-    <dd class="invisible">here are 10 things</dd>
-    <dd class="invisible">here are 10 things</dd>
-    <dd class="invisible">here are 10 things</dd>
-    <dd class="invisible">here are 10 things</dd>
-    <dd class="invisible">here are 10 things</dd>
-    <dd class="invisible">here are 10 things</dd>
-    <dd class="invisible">here are 10 things</dd>
-    <dd class="invisible">here are 10 things</dd>
+    <dd class="invisible">here are some things</dd>
+    <dd class="invisible">here are some things</dd>
+    <dd class="invisible">here are some things</dd>
+    <dd class="invisible">here are some things</dd>
+    <dd class="invisible">here are some things</dd>
+    <dd class="invisible">here are some things</dd>
+    <dd class="invisible">here are some things</dd>
+    <dd class="invisible">here are some things</dd>
+    <dd class="invisible">here are some things</dd>
+    <dd class="invisible">here are some things</dd>
 </dl>
+<!--Create a button that, when clicked, makes the last li in each ul have a yellow background.-->
+
+<!--When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.-->
+
+<!--When any list item is clicked, first li of the parent ul should have a font color of blue.-->
+<button id="clickIt" type="submit" value="click-me">click me plz</button>
+<ul class="one">
+    <h3>click one of my items</h3>
+    <li>blah blah blah</li>
+    <li>blah blah blah</li>
+    <li>blah blah blah</li>
+    <li>blah blah blah</li>
+</ul>
+<ul class="two">
+    <h3>click one of my items</h3>
+    <li>blah blah blah</li>
+    <li>blah blah blah</li>
+    <li>blah blah blah</li>
+    <li>blah blah blah</li>
+</ul>
+<ul class="three">
+    <h3>click one of my items</h3>
+    <li>blah blah blah</li>
+    <li>blah blah blah</li>
+    <li>blah blah blah</li>
+    <li>blah blah blah</li>
+</ul>
 <body>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
-    $(document).ready(function() {
-        $('dt').click(function(event) {
+    'use strict'
+    $(document).ready(function () {
+        $('dt').click(function (event) {
             event.preventDefault();
             $('dd').toggleClass('invisible');
             $('dt').addClass('highlighted');
         });
+        $("#clickIt").click(function(){
+            $('ul').each(function(){
+                $(this).children().last().css('background-color','yellow');
+            })
+        })
+        $('h3').click(function(){
+            $(this).next().children().css('font-weight','bold');
+        })
+        $('li').click(function (){
+            $(this).parent().children().first().css('color','blue');
+        })
     });
+
 </script>
 </body>
 </html>
