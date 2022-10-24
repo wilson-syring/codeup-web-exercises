@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Online Store</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        body{
+            color: antiquewhite;
+            font-style: italic;
+            font-family: lobster;
+        }
+        .tableLocation{
+            width: 45%;
+            margin: 0 auto;
+            float: none;
+            border: 5px solid antiquewhite;
+            margin-top: 2em;
+            color: antiquewhite;
+
+        }
+        .button{
+            margin-left: 46%;
+            margin-top: 2em;
+            background: antiquewhite;
+        }
+        .background{
+            background: #2c248d;
+        }
+    </style>
 </head>
-<body>
+<body class="container-fluid background mt-2">
 
-<h1>My Tool Store</h1>
+<h1 class="text-center">My Tool Store</h1>
 
-<table id="products">
+<table id="products" class="table blockquote tableLocation ">
     <thead>
         <tr>
             <th>Title</th>
@@ -18,18 +46,46 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
-
+<button id="button" class="button">I refresh so you dont have to</button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
 (function() {
     "use strict";
-    // TODO: Create an AJAX GET request for the file under data/inventory.json
 
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+    $.get('data/inventory.json.txt').done(function (data) {
+        console.log(data);
+    })
+    $("#button").click(function() {
+        inventoryTab();
+    });
+
+    function inventoryTab(){
+        $("#insertProducts").html("");
+
+        function generateRow(inventoryItem){
+            var tableRow = document.createElement('tr');
+            var tableData = document.createElement('td');
+            $(tableData).text(inventoryItem.title);
+            var quantity = document.createElement('td');
+            $(quantity).text(inventoryItem.quantity);
+            var pricing = document.createElement('td');
+            $(pricing).text(inventoryItem.price.tofixed(2));
+        }
+        generateRow();
+    }
+    inventoryTab();
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
+//    $(insertProducts).click(){
+//     var tdContents = $('#insertProducts').html();
+//         $(this).html('Codeup Rocks!');
+//
+// });
 })();
 </script>
 
