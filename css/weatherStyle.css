@@ -1,0 +1,9 @@
+body{
+    background-color: #5549c5;
+}
+h1, h2{
+    color: antiquewhite;
+}
+nav {
+    border-bottom: 2px solid cornflowerblue;
+}
