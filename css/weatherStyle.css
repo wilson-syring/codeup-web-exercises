@@ -7,3 +7,7 @@ h1, h2{
 nav {
     border-bottom: 2px solid cornflowerblue;
 }
+.card, .form-control{
+    background-color: #2c2c2d;
+    color: antiquewhite;
+}
