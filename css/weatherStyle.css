@@ -1,5 +1,7 @@
 body{
     background-color: #5549c5;
+    margin: 0;
+    padding: 0;
 }
 h1, h2{
     color: antiquewhite;
@@ -10,4 +12,9 @@ nav {
 .card, .form-control{
     background-color: #2c2c2d;
     color: antiquewhite;
+}
+#map {
+    /* the width and height may be set to any size */
+    width: 100%;
+    height: 700px;
 }

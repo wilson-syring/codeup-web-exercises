@@ -25,6 +25,7 @@ let weatherIt = {
             maximumAge: 1000 * 60 * 5,
         };
         navigator.geolocation.getCurrentPosition(weatherIt.gotLoc, weatherIt.failLoc, opts);
+
     },
     gotLoc: function (position) {
         document.getElementById('latitude').value = position.coords.latitude;
@@ -63,3 +64,27 @@ let weatherIt = {
 };
 
 weatherIt.initialize();
+mapboxgl.accessToken = mapKey;
+
+const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-98.401411, 29.492467],
+    zoom: 1,
+    projection: 'globe'
+});
+
+map.on('style.load', () => {
+    map.setFog({});
+});
+
+map.addControl(
+    new mapboxgl.GeolocateControl({
+        positionOptions: {
+            enableHighAccuracy: true
+        },
+        trackUserLocation: true,
+        showUserHeading: true
+    })
+);
+map.addControl(new mapboxgl.NavigationControl());
