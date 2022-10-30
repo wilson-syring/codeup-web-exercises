@@ -10,8 +10,8 @@ let weatherIt = {
         var cnt = 5;
         var key = weatherKey;
         var units = 'imperial';
-        var url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=${cnt}&appid=${key}&units=${units}`;
-        $.ajax(url).done(function(data){
+        var url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&cnt=${cnt}&appid=${key}&units=${units}`;
+        $.ajax(url).done(function (data) {
             console.log(data);
             weatherIt.weatherShow(data);
             return data.json;
@@ -30,11 +30,35 @@ let weatherIt = {
         document.getElementById('latitude').value = position.coords.latitude;
         document.getElementById('longitude').value = position.coords.longitude;
     },
-    failLoc: function(error){
+    failLoc: function (error) {
         console.error(error);
     },
-    weatherShow: function(response){
-        console.log(response);
+    weatherShow: function (data) {
+        console.log(data);
+        let row = document.querySelector('.weather.row');
+        row.innerHTML = data.daily.map((day, idx) => {
+            if (idx <= 4) {
+                var dateTime = new Date(day.dt * 1000)
+                return `<div class="row ">
+                            <div class="col-auto">
+                                <div class="card">
+                                     <h5 class="card-title text-center p-2">${dateTime.toDateString()}</h5>
+                                     <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png" class="card-img-top" alt="${day.weather[0].description}"
+                                    <div class="card-body">
+                                        <h3 class="card-title">${day.weather[0].main}</h3>
+                                        <p class="card-text">High:${day.temp.max.toFixed(0)}°F</p>
+                                        <p class="card-text">Low:${day.temp.min.toFixed(0)}°F</p>
+                                        <p class="card-text">Feels like:${day.feels_like.day.toFixed(0)}°F</p>
+                                        <p class="card-text">Pressure:${day.pressure}</p>
+                                        <p class="card-text">Humidity:${day.humidity}%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+
+            }
+        }).join('');
+
     },
 };
 
