@@ -56,7 +56,6 @@ let weatherIt = {
                                 </div>
                             </div>
                         </div>`;
-
             }
         }).join('');
 
@@ -68,7 +67,7 @@ mapboxgl.accessToken = mapKey;
 
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
+    style: 'mapbox://styles/mapbox/satellite-v9',
     center: [-98.401411, 29.492467],
     zoom: 1,
     projection: 'globe'
