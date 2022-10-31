@@ -86,7 +86,7 @@ users.forEach(function (user) {
     developers.push(`${name}'s email is ${email} ${name} knows ${languages.join(', ')}`);
 });
 // TODO: Use `let` for the following variable
-    let list = '<ul>';
+let list = '<ul>';
 
 // TODO: rewrite the following loop to use a for..of loop
 // developers.forEach(function (developer) {
@@ -94,10 +94,9 @@ users.forEach(function (user) {
 // TODO: rewrite the assignment below to use template strings
 //   list += '<li>' + developer + '</li>';
 // });
-// list += '</ul>';
-    for (let developer of developers) {
-        list += `<li> ${developer} </li>`;
-        const body = document.getElementById('body');
-        body.innerHTML = list;
-        console.log(developer);
-    }
+//
+for (let developer of developers) {
+    list += `<li> ${developer} </li>`;
+    list += '</ul>';
+    console.log(developer);
+}
